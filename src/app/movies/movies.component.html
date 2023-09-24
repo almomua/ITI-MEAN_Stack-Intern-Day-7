@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row mt-5">
+
+    <div class="preview-card" *ngFor="let item of allMovies">
+      <div class="preview-card__wrp">
+        <div class="preview-card__item">
+          <div class="preview-card__img">
+            <img [src]="imagePath+item.poster_path" alt="">
+          </div>
+          <div class="preview-card__content">
+            <span class="preview-card__code"></span>
+            <div class="preview-card__title">
+              {{item.title}}
+
+            </div>
+            <div class="preview-card__text" *ngIf="item.toggleDisc">
+              {{item.overview}}
+            </div>
+            <a [routerLink]="['/Details',item.id]"class="preview-card__button me-2">Watch</a>
+            <a  class="preview-card__button" (click)="toggleDetails(item.id)">{{item.toggleDisc?"Hide Details":"Show More"}}</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

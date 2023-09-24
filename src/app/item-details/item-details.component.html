@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="cellphone-container">
+      <div class="movie ">
+        <div class="menu"><i class="material-icons"></i></div>
+        <div class="movie-img">
+          <img class="w-100" [src]="imagePath+selected.poster_path">
+        </div>
+        <div class="text-movie-cont">
+          <div class="mr-grid">
+            <div class="col1">
+              <h1>{{selected.title?selected.title:selected.name}}</h1>
+              <ul class="movie-gen">
+                <li>PG-13  /</li>
+                <li>2h 49min  /</li>
+                <li>Adventure, Drama, Sci-Fi,</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mr-grid summary-row">
+            <div class="col2">
+              <h5>SUMMARY</h5>
+            </div>
+            <div class="col2">
+               <ul class="movie-likes">
+                <li><i class="material-icons">&#xE813;</i>124</li>
+                <li><i class="material-icons">&#xE813;</i>3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mr-grid">
+            <div class="col1">
+              <p class="movie-description">{{selected.overview}} </div>
+          </div>
+          <div class="mr-grid actors-row">
+            <div class="col1">
+              <p class="movie-actors">Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>
+<a target="_blank">
+  <img class="dribbble-link" [src]="imagePath+selected.poster_path">
+</a>
